@@ -48,6 +48,7 @@ function startGame() {
 
 //Checks if users letter is in the word
 function checkLetters(letters){
+	//using Boolean to check if the letter is in the word
 	var letterInWord = false;
 	for (var i = 0; i < blanks.length; i++) {
 		if (letterInWord[i] == guessedLetter){
@@ -56,6 +57,13 @@ function checkLetters(letters){
 	};
 
 	if (letterInWord){
+		for (var i = 0; i < blanks.length; i++) {
+			blanks[i]
+
+			if (letterInWord[i] == letter){
+				
+			} 
+		}
 
 	};
 	else {
