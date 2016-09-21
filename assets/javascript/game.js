@@ -38,18 +38,31 @@ function startGame() {
     blanksAndSuccess.push("_")
   };
 
-  console.log("Word length is " + blanks);
   console.log(currentLetters);
   console.log(blanksAndSuccess);
   document.getElementById('currentWord').innerHTML = "The current word " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
-	//document.getElementById('').innerHTML = 
+  document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
+
 };
 
-//Restarts
-// function checkLetters(letters){
+//Checks if users letter is in the word
+function checkLetters(letters){
+	var letterInWord = false;
+	for (var i = 0; i < blanks.length; i++) {
+		if (letterInWord[i] == guessedLetter){
+			letterInWord = true;
+		}
+	};
 
-// };
+	if (letterInWord){
+
+	};
+	else {
+
+	};
+
+};
 //Upon finishing
 // function round (){
 
