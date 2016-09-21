@@ -4,6 +4,7 @@
 // .guessesRemaining
 // .guessed
 
+
 //Made the variables first to use in the functions
 //Array of fruitwords
 var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
@@ -34,13 +35,13 @@ function startGame() {
   //Need to know how many blanks
   var blanks = currentWord.length;
   for (var i = 0; i < blanks; i++) {
-  	blanksAndSuccess.push("_")
+  	blanksAndSuccess.push(" _ ")
   };
 
   console.log("Word length is " +blanks);
  console.log(currentLetters);
  console.log(blanksAndSuccess);
- //document.getElementById('currentWord').innerHTML = blanksAndSuccess;
+ document.getElementById('currentWord').innerHTML = "The current word " +blanksAndSuccess;
 };
 
 //Restarts
