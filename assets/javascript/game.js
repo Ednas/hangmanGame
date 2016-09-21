@@ -9,9 +9,6 @@
 var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
 var blanksAndGuesses = []; //Guesses and blanks will be in this array
 var blanks = 0; //holds blanks spaces for the word chosen
-//Selects a fruitword at random
-var currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
-   console.log(currentWord);
 
 // Counters
 var winCounter  = 0;
@@ -27,6 +24,12 @@ var correctLetter = [];
 //Below is the functionality of the game
 function startGame(){
 	numGuesses = 9;
+//Selects a fruitword at random
+var currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
+   console.log(currentWord);
+//Splits the current word into letters, so that you can match the users guesses to the letters of the word
+var currentLetters = currentWord.split("");
+
 };
 
 
@@ -41,8 +44,7 @@ document.onkeyup = function(event)
 	document.getElementById('guessed').innerHTML = "Letters Already Guessed " + guessedLetter;
 
 
-//Splits the current word into letters, so that you can match the users guesses to the letters of the word
-var currentLetters = currentWord.split("");
+
 console.log(currentLetters);
 
 //If the users guessed letter = a current letter, it will pop that letter off the array 
