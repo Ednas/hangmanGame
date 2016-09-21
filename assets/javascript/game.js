@@ -35,13 +35,16 @@ function startGame() {
   //Need to know how many blanks
   var blanks = currentWord.length;
   for (var i = 0; i < blanks; i++) {
-  	blanksAndSuccess.push(" _ ")
+    blanksAndSuccess.push("_")
   };
 
-  console.log("Word length is " +blanks);
- console.log(currentLetters);
- console.log(blanksAndSuccess);
- document.getElementById('currentWord').innerHTML = "The current word " +blanksAndSuccess;
+  console.log("Word length is " + blanks);
+  console.log(currentLetters);
+  console.log(blanksAndSuccess);
+  document.getElementById('currentWord').innerHTML = "The current word " + blanksAndSuccess.join(" ");
+  document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
+
+    //document.getElementById('').innerHTML = 
 };
 
 //Restarts
@@ -53,36 +56,12 @@ document.onkeyup = function(event) {
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
   console.log(userGuess);
 
-  guessedLetter.push(" " + userGuess);
+  guessedLetter.push(userGuess);
+  document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
 
-  document.getElementById('guessed').innerHTML = "Letters Already Guessed " + guessedLetter;
 
 };
 
- 
-
-  //If the users guessed letter = a current letter, it will pop that letter off the array 
-  //and once the user has emptied the array, they win. If they use up more than 20 letters, then
-  //they lose.
-
-  // for (var i = 0; i < currentLetters.length; i++) {
-  //   currentLetters[i]
-
-  //   if (currentLetters == userGuess) {
-  //     console.log(userGuess);
-  //   } else {
-  //     console.log("Wrong guess");
-  //   }
-  // };
-
-
-  // for (var i = currentWord.length - 1; i >= 0; i--) {
-  // 	currentWord[i]
-  // 	var goal = userGuess.match(currentLetters);
-  // console.log(userGuess + "it worked");
-  // currentLetters.pop(userGuess);
-  // console.log(currentLetters);
-  // };
 
 
 //   if (userGuess === currentLetters) {
