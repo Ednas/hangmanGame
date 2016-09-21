@@ -4,6 +4,7 @@
 // .guessesRemaining
 // .guessed
 
+//Made the variables first to use in the functions
 //Array of fruitwords
 var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
 var blanksAndGuesses = []; //Guesses and blanks will be in this array
@@ -12,13 +13,20 @@ var blanks = 0; //holds blanks spaces for the word chosen
 var currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
    console.log(currentWord);
 
+// Counters
+var winCounter  = 0;
+var lossCounter = 0;
+var numGuesses  = 9;   
+
 //array for users guessed letters
 var guessedLetter = [];
 //array for users correct guesses
 var correctLetter = [];
 
-function makeBlanks(){
-	blanks = currentWord.length;
+
+//Below is the functionality of the game
+function startGame(){
+	numGuesses = 9;
 };
 
 
