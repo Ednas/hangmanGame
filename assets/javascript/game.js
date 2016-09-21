@@ -43,13 +43,26 @@ function startGame() {
   console.log(blanksAndSuccess);
   document.getElementById('currentWord').innerHTML = "The current word " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
-
-    //document.getElementById('').innerHTML = 
+	//document.getElementById('').innerHTML = 
 };
 
 //Restarts
+// function checkLetters(letters){
 
+// };
 //Upon finishing
+// function round (){
+
+// };
+
+
+
+
+
+//Making the stuff run
+
+//Calling the startGame function
+startGame();
 
 //once you click a button, makes it lowercase and adds to the user guess element ID
 document.onkeyup = function(event) {
@@ -58,19 +71,8 @@ document.onkeyup = function(event) {
 
   guessedLetter.push(userGuess);
   document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
-
+//  checkLetters(letterGuessed); // runs the code to check for correctness 
+//  round();
 
 };
 
-
-
-//   if (userGuess === currentLetters) {
-//     console.log("Works");
-//   };
-// }
-
-
-//Making the stuff work
-
-//Calling the startGame function
-startGame();
