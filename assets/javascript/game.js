@@ -40,7 +40,7 @@ function startGame() {
 
   console.log(currentLetters);
   console.log(blanksAndSuccess);
-  document.getElementById('currentWord').innerHTML = "The current word " + blanksAndSuccess.join(" ");
+  document.getElementById('currentWord').innerHTML = "Find the missing letters: " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
   document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
 
@@ -51,16 +51,16 @@ function checkLetters(letter){
 	//using Boolean to check if the letter is in the word
 	var letterInWord = false;
 	for (var i = 0; i < blanks; i++) {
-		if (letterInWord[i] == userGuess){
+		if (1 === 1){//(currentLetters[i] == userGuess){
 			letterInWord = true;
 		}
 	};
-	console.log(letterInWord + "something");
+	 console.log(letterInWord + " something");
 	if (letterInWord){
 		for (var i = 0; i < blanks; i++) {
 			//blanks[i]
-			console.log("Triggered 2");
-			if (letterInWord[i] == letter){
+			
+			if (currentLetters[i] == letter){
 				blanksAndSuccess[i] = letter
 				console.log("Triggered 3");
 			}
