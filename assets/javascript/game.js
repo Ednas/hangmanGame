@@ -47,7 +47,7 @@ function startGame() {
 };
 
 //Checks if users letter is in the word
-function checkLetters(letters){
+function checkLetters(letter){
 	//using Boolean to check if the letter is in the word
 	var letterInWord = false;
 	for (var i = 0; i < blanks.length; i++) {
@@ -61,13 +61,13 @@ function checkLetters(letters){
 			blanks[i]
 
 			if (letterInWord[i] == letter){
-				
-			} 
+				blanksAndSuccess[i] = letter
+			}
 		}
-
-	};
+console.log(blanksAndSuccess);
+	}
 	else {
-
+console.log("wrong");
 	};
 
 };
@@ -92,8 +92,8 @@ document.onkeyup = function(event) {
 
   guessedLetter.push(userGuess);
   document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
-//  checkLetters(letterGuessed); // runs the code to check for correctness 
-//  round();
+  checkLetters(userGuess); // runs the code to check for correctness 
+ // round();
 
 };
 
