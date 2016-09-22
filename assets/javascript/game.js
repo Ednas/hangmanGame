@@ -10,7 +10,7 @@
 var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
 var blanksAndSuccess = []; //Correct guesses and blanks will be in this array
 var blanks = 0; //holds blanks spaces for the word chosen
-
+var currentWord = "";
 // Counters
 var winCounter = 0;
 var lossCounter = 0;
@@ -50,26 +50,29 @@ function startGame() {
 function checkLetters(letter){
 	//using Boolean to check if the letter is in the word
 	var letterInWord = false;
-	for (var i = 0; i < blanks.length; i++) {
-		if (letterInWord[i] == guessedLetter){
+	for (var i = 0; i < blanks; i++) {
+		if (letterInWord[i] == userGuess){
 			letterInWord = true;
 		}
 	};
-
+	console.log(letterInWord + "something");
 	if (letterInWord){
-		for (var i = 0; i < blanks.length; i++) {
-			blanks[i]
-
+		for (var i = 0; i < blanks; i++) {
+			//blanks[i]
+			console.log("Triggered 2");
 			if (letterInWord[i] == letter){
 				blanksAndSuccess[i] = letter
+				console.log("Triggered 3");
 			}
 		}
-console.log(blanksAndSuccess);
+ console.log(blanksAndSuccess);
+
 	}
 	else {
-console.log("wrong");
-	};
-
+		incorrectGuess.push(letter);
+		numGuesses--;	
+		console.log("that was incorrect" + numGuesses + " are remaining");
+};
 };
 //Upon finishing
 // function round (){
@@ -89,7 +92,6 @@ startGame();
 document.onkeyup = function(event) {
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
   console.log(userGuess);
-
   guessedLetter.push(userGuess);
   document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
   checkLetters(userGuess); // runs the code to check for correctness 
