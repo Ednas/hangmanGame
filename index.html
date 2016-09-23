@@ -2,38 +2,55 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-	<title>
-		Hangman Game | Team Awesome
-	</title>
-	<!--Stylesheets-->
-	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-
+  <meta charset="UTF-8">
+  <title>
+    Hangman Game | Team Awesome
+  </title>
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
 </head>
-	<header><h1>Hangman Game | Fruity McFruit Face</h1></header>
 
 <body>
-
-
-	<div class="scoreBoard">
-		<p>
-		Press Any Key To Get Started!
-		</p>
-		<p id="wins">Wins</p>
-
-		<p id="currentWord">Current Word</p>
-
-		<p id="guessesRemaining">Number Of Guesses Remaining:</p>
-
-		<p id="guessed">Letters Already Guessed:</p>
-
-		<p id="wordblanks"> Blanks: </p>
-		<p id="correct"></p>
-		</p>
-	</div>
-		<!--Javascript file-->
-	<script src="assets/javascript/game.js"></script>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Hangman Game | Fruity McFruit Face</h1>
+    </div>
+  </div>
+  <div class="scoreBoard">
+    <ul class="list-group">
+      <li class="list-group-item active">
+        <p> Press Any Key To Get Started!</p>
+      </li>
+      <li class="list-group-item">
+        <p id="wins">Wins</p>
+      </li>
+      <li class="list-group-item">
+        <p id="currentWord">Current Word</p>
+      </li>
+      <li class="list-group-item">
+        <p id="guessesRemaining">Number Of Guesses Remaining:</p>
+      </li>
+      <li class="list-group-item">
+        <p id="guessed">Letters Already Guessed:</p>
+      </li>
+      <li class="list-group-item">
+        <p id="lossCounter"></p>
+      </li>
+      <li class="list-group-item">
+        <p id="wordblanks"> Blanks: </p>
+      </li>
+      <li class="list-group-item">
+        <p id="correct"></p>
+      </li>
+      <li class="list-group-item">
+        <p></p>
+      </li>
+    </ul>
+  </div>
+  <!--Javascript file-->
+  <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>

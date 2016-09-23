@@ -34,11 +34,11 @@ function startGame() {
   var currentLetters = currentWord.split("");
 
   //Need to know how many blanks
-  var blanks = currentWord.length;
+  var blanks = currentLetters.length;
   for (var i = 0; i < blanks; i++) {
     blanksAndSuccess.push("_")
   };
-
+  console.log(currentWord + " Yup");
   console.log(currentLetters);
   console.log(blanksAndSuccess);
   document.getElementById('guessesRemaining').innerHTML = numGuesses;
@@ -49,64 +49,64 @@ function startGame() {
 };
 
 //Checks if users letter is in the word
-function checkLetters(letter){
-	//using Boolean to check if the letter is in the word
-	var letterInWord = false;
-	//loop that goes through the length of the word
-	for (var i = 0; i < blanks; i++) {
-		if (currentWord[i] == userGuess){
-			letterInWord = true;
-		}
-	};
-	 console.log(letterInWord + " something");
-	if (letterInWord){
-		for (var i = 0; i < blanks; i++) {
-			//blanks[i]
-			
-			if (currentWord[i] == letter){
-				blanksAndSuccess[i] = letter
-				console.log("Triggered 3");
-			}
-		}
- console.log(blanksAndSuccess);
+function checkLetters(letter) {
+  //using Boolean to check if the letter is in the word
+  var letterInWord = false;
+  //loop that goes through the length of the word
+  for (var i = 0; i < blanks; i++) {
+    if (currentWord[i] == letter) {
+      letterInWord = true;
+      console.log(letterInWord + "woof");
+    }
+  };
+  console.log(currentWord + " something");
+  if (letterInWord) {
+    for (var i = 0; i < blanks; i++) {
+      //blanks[i]
 
-	}
-	else {
-		incorrectGuess.push(letter);
-		numGuesses--;	
-		console.log("that was incorrect" + numGuesses + " are remaining");
-};
+      if (currentWord[i] == letter) {
+        blanksAndSuccess[i] = letter
+        console.log("Triggered 3");
+      }
+    }
+    console.log(blanksAndSuccess);
+
+  } else {
+    incorrectGuess.push(letter);
+    numGuesses--;
+    console.log("that was incorrect" + numGuesses + " are remaining");
+  };
 };
 //Upon finishing
-function round (){
+function round() {
 
-	console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
+  console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
 
-	// Update the HTML to reflect the new number of guesses. Also update the correct guesses.
-	//document.getElementById("scoreBoard").innerHTML= numGuesses;
-//	document.getElementById("wordblanks").innerHTML = blanksAndSuccesses.join(" "); // This will print the array of guesses and blanks onto the page
-//	document.getElementById("guessedWrong").innerHTML = incorrectGuess.join(" "); // this will print the wrong guesses onto the page.
+  // Update the HTML to reflect the new number of guesses. Also update the correct guesses.
+  //document.getElementById("scoreBoard").innerHTML= numGuesses;
+  //	document.getElementById("wordblanks").innerHTML = blanksAndSuccesses.join(" "); // This will print the array of guesses and blanks onto the page
+  //	document.getElementById("guessedWrong").innerHTML = incorrectGuess.join(" "); // this will print the wrong guesses onto the page.
 
-	// If we have gotten all the letters to match the solution... 
-	if (currentLetters.toString() == blanksAndSuccess.toString()) {
-		winCounter++; // add to the win counter 
-		document.getElementById("correct").innerHTML = currentWord;
-		alert("You win!"); // give the user an alert
+  // If we have gotten all the letters to match the solution... 
+  if (currentLetters.toString() == blanksAndSuccess.toString()) {
+    winCounter++; // add to the win counter 
+    document.getElementById("correct").innerHTML = currentWord;
+    alert("You win!"); // give the user an alert
 
-		// Update the win counter in the HTML
-		document.getElementById("winCounter").innerHTML= winCounter;
-		startGame(); // restart the game 
-	}
+    // Update the win counter in the HTML
+    document.getElementById("winCounter").innerHTML = winCounter;
+    startGame(); // restart the game 
+  }
 
-	// If we've run out of guesses
-	else if(numGuesses == 0) {
-		lossCounter++; 	 // add to the loss counter 
-		alert("You lose"); // give the user an alert
+  // If we've run out of guesses
+  else if (numGuesses == 0) {
+    lossCounter++; // add to the loss counter 
+    alert("You lose"); // give the user an alert
 
-		// Update the loss counter in the HTML
-		document.getElementById("lossCounter").innerHTML= lossCounter; 
-		startGame(); // restart the game
-	}
+    // Update the loss counter in the HTML
+    document.getElementById("lossCounter").innerHTML = lossCounter;
+    startGame(); // restart the game
+  }
 
 }
 
@@ -129,4 +129,3 @@ document.onkeyup = function(event) {
   round();
 
 };
-
