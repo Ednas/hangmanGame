@@ -1,10 +1,3 @@
-// .scoreBoard
-// .wins
-// .currentWord
-// .guessesRemaining
-// .guessedWrong
-
-
 //Made the variables first to use in the functions
 //Array of fruitwords
 var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
@@ -44,7 +37,7 @@ function startGame() {
   document.getElementById('guessesRemaining').innerHTML = numGuesses;
   document.getElementById('currentWord').innerHTML = "Find the missing letters: " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
-  document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
+//  document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
 
 };
 
