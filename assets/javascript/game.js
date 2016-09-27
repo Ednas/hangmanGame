@@ -31,14 +31,11 @@ function startGame() {
   for (var i = 0; i < blanks; i++) {
     blanksAndSuccess.push("_")
   };
-  console.log(currentWord + " Yup");
-  console.log(currentLetters);
+  console.log(currentWord);
   console.log(blanksAndSuccess);
-  document.getElementById('guessesRemaining').innerHTML = numGuesses;
+  document.getElementById('guessesRemaining').innerHTML = numGuesses + "Yum";
   document.getElementById('currentWord').innerHTML = "Find the missing letters: " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
-//  document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
-
 };
 
 //Checks if users letter is in the word
@@ -87,17 +84,17 @@ function round() {
     alert("You win!"); // give the user an alert
 
     // Update the win counter in the HTML
-    document.getElementById("winCounter").innerHTML = winCounter;
+    document.getElementById("winCounter").innerHTML = "You have won " + winCounter + " game(s)";
     startGame(); // restart the game 
   }
 
   // If we've run out of guesses
   else if (numGuesses == 0) {
     lossCounter++; // add to the loss counter 
-    alert("You lose"); // give the user an alert
+    alert("You lose."); // give the user an alert
 
     // Update the loss counter in the HTML
-    document.getElementById("lossCounter").innerHTML = lossCounter;
+    document.getElementById("lossCounter").innerHTML = "You have lost " + lossCounter + " game(s)";
     startGame(); // restart the game
   }
 
