@@ -79,7 +79,7 @@ function round() {
   // If we have gotten all the letters to match the solution... 
   if (currentLetters.toString() == blanksAndSuccess.toString()) {
     winCounter++; // add to the win counter 
-    document.getElementById("correct").innerHTML = "The word was " +currentWord;
+    document.getElementById("word").innerHTML = "The word was " +currentWord;
     alert("You win! The word was " + currentWord); // give the user an alert
 
     // Update the win counter in the HTML
@@ -90,6 +90,8 @@ function round() {
   // If we've run out of guesses
   else if (numGuesses == 0) {
     lossCounter++; // add to the loss counter 
+        document.getElementById("word").innerHTML = "The word was " +currentWord;
+
     guessedLetter = [];
     incorrectGuess = [];
     alert("You lose. The word was " + currentWord); // give the user an alert
