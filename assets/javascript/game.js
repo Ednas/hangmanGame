@@ -1,6 +1,9 @@
 //Made the variables first to use in the functions
 //Array of fruitwords
-var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'pineapple'];
+var fruitWords = ['banana', 'fig', 'watermelon', 'grape', 'coconut', 'cherry', 'lime', 'pineapple', 
+'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'blackberry', 
+'mango', 'plum', 'pear', 'papaya', 'avoccodo', 'pasionfruit', 'current', 'boysenberry', 'quints', 'salmonberry',
+'yuzu', 'grapefruit', 'kumquat'];
 var blanksAndSuccess = []; //Correct guesses and blanks will be in this array
 var blanks = 0; //holds blanks spaces for the word chosen
 var currentWord = "";
