@@ -13,12 +13,30 @@ var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 12;
 
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+  'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'];
+
 //array for users guessed letters
 var guessedLetter = [];
 //array for users correct guesses
 var correctLetter = [];
 //guessed letters that are incorrect
 var incorrectGuess = [];
+
+ // create alphabet ul
+  var buttons = function () {
+    myButtons = document.getElementById('alphabet-btns');
+    letters = document.createElement('ul');
+
+    for (var i = 0; i < alphabet.length; i++) {
+      letters.id = 'alphabet';
+      list = document.createElement('li');
+      list.id = 'letter';
+      list.innerHTML = alphabet[i];
+      myButtons.appendChild(letters);
+      letters.appendChild(list);
+    }
+  }
 
 //Below is the functionality of the game
 function startGame() {
