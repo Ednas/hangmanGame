@@ -57,6 +57,7 @@ function startGame() {
   console.log(blanksAndSuccess);
   document.getElementById('currentWord').innerHTML = "Find the missing letters: " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
+  document.getElementById('guessed').innerHTML = "Letters already guessed: "
 }
 
 //Checks if users letter is in the word
