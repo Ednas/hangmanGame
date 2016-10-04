@@ -23,20 +23,7 @@ var correctLetter = [];
 //guessed letters that are incorrect
 var incorrectGuess = [];
 
- // create alphabet ul
-  var buttons = function () {
-    myButtons = document.getElementById('alphabet-btns');
-    letters = document.createElement('ul');
 
-    for (var i = 0; i < alphabet.length; i++) {
-      letters.id = 'alphabet';
-      list = document.createElement('li');
-      list.id = 'letter';
-      list.innerHTML = alphabet[i];
-      myButtons.appendChild(letters);
-      letters.appendChild(list);
-    }
-  }
 
 //Below is the functionality of the game
 function startGame() {
@@ -84,6 +71,27 @@ function checkLetters(letter) {
     numGuesses--;
     console.log("that was incorrect " + numGuesses + " are remaining");
   }
+   // create alphabet ul
+  var buttons = function () {
+    myButtons = document.getElementById('alphabet-btns');
+    letters = document.createElement('ul');
+    console.log(letters);
+    for (var i = 0; i < alphabet.length; i++) {
+      letters.id = 'alphabet';
+      list = document.createElement('li');
+      list.id = 'letter';
+      list.innerHTML = alphabet[i];
+      myButtons.appendChild(letters);
+      letters.appendChild(list);
+
+//attempting to make alphabet into button
+      var btn = document.createElement('BUTTON');        
+      var t = document.createTextNode(alphabet);     
+      btn.appendChild(t);                            
+      document.body.appendChild(btn);  
+    }
+  }
+  buttons();
 }
 
 
