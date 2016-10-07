@@ -23,7 +23,31 @@ var correctLetter = [];
 //guessed letters that are incorrect
 var incorrectGuess = [];
 
+   // create alphabet ul
+  var buttons = function () {
+    //gets the alphabet button id from html
+    myButtons = document.getElementById('alphabet-btns');
+    //creates unordered list for the letters
+    letters = document.createElement('ul');
 
+
+    //loops through the alphabet
+    for (var i = 0; i < alphabet.length; i++) {
+      //creates li for list
+      list = document.createElement('li');
+      //this creates the button and adds the bootstrap button look to it
+      list = document.createElement('BUTTON');
+      list.classList.add('btn-primary');
+      //gives each list item the id letter
+      list.id = 'letter';
+      list.innerHTML = alphabet[i];
+      //appends letters to my buttons and list to letters
+      myButtons.appendChild(letters);
+      letters.appendChild(list);
+ 
+    }
+  }
+  buttons();
 
 //Below is the functionality of the game
 function startGame() {
@@ -71,27 +95,7 @@ function checkLetters(letter) {
     numGuesses--;
     console.log("that was incorrect " + numGuesses + " are remaining");
   }
-   // create alphabet ul
-  var buttons = function () {
-    myButtons = document.getElementById('alphabet-btns');
-    letters = document.createElement('ul');
-    console.log(letters);
-    for (var i = 0; i < alphabet.length; i++) {
-      letters.id = 'alphabet';
-      list = document.createElement('li');
-      list.id = 'letter';
-      list.innerHTML = alphabet[i];
-      myButtons.appendChild(letters);
-      letters.appendChild(list);
 
-//attempting to make alphabet into button
-      var btn = document.createElement('BUTTON');        
-      var t = document.createTextNode(alphabet);     
-      btn.appendChild(t);                            
-      document.body.appendChild(btn);  
-    }
-  }
-  buttons();
 }
 
 
