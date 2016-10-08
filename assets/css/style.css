@@ -1,5 +1,13 @@
+.jumbotron {
+  text-align: center;
+}
 .scoreBoard {
 	align-content: center;
+}
+
+#currentWord{
+  text-align: center;
+  font-size: 30px;
 }
 
 #alphabet-btns {
@@ -14,3 +22,42 @@
   width: 35px;
   height: 30px;
 }
+
+.btn-primary {
+
+    &:hover{
+      background:$base-color;
+      border: solid 1px $grey;
+      color:$grey;
+    }  
+
+}
+/*.btn-primary {
+    font-size: 30px;  
+}*/
+
+/*.btn li {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+
+  cursor:pointer;
+  @include corners(5px);
+  border: solid 1px $red;
+    
+    &:hover{
+      background:$base-color;
+      border: solid 1px $grey;
+      color:$grey;
+    }
+}*/
+
+/*button {
+  font-size: 30px;
+}*/
