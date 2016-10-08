@@ -48,6 +48,7 @@ var incorrectGuess = [];
     }
   }
   buttons();
+//document.getElementById('letter').style.fontSize='60px';  
 
 //Below is the functionality of the game
 function startGame() {

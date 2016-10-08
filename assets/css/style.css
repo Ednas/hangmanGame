@@ -2,32 +2,15 @@
 	align-content: center;
 }
 
-
-.btn {}
-
-#letter {
-  float: right;
-    display:block; 
-    margin:0 auto;
-    text-align: center;
+#alphabet-btns {
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
-/*.btn li {
-  float:left;
+
+#letter {
   margin: 0 10px 10px 0;
-  list-style:none;
-  width:35px;
-  height:30px;
-  padding-top:10px;
-  background:$black;
-  color:$base-color;
-  cursor:pointer;
-  @include corners(5px);
-  border: solid 1px $red;
-    
-    &:hover{
-      background:$base-color;
-      border: solid 1px $grey;
-      color:$grey;
-    }
-}*/
+  width: 35px;
+  height: 30px;
+}

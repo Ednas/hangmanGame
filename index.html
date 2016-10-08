@@ -9,51 +9,52 @@
   <!--Stylesheets-->
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
 </head>
 
 <body>
-<div class="col-md-2"></div>
-<div class="col-md-8">
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Hangman Game <br> Fruity McFruit Face</h1>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hangman Game <br> Fruity McFruit Face</h1>
+      </div>
     </div>
-  </div>
-  <div class="scoreBoard">
-    <ul class="list-group">
-      <li class="list-group-item active">
-        <p> Press Any Key To Get Started!</p>
-      </li>
-      <li class="list-group-item">
-        <p id="winCounter">Wins</p>
-      </li>
-       <li class="list-group-item">
-        <p id="lossCounter">Losses</p>
-      </li>
-      <li class="list-group-item">
-        <p id="currentWord">Current Word</p>
-      </li>
-      <li class="list-group-item">
-        <p id="guessesRemaining">Number Of Guesses Remaining:</p>
-      </li>
-      <li class="list-group-item">
-        <p id="guessed">Letters Already Guessed:</p>
-      </li>
-      <li class="list-group-item">
-        <p id="word"></p>
-      </li>
-    </ul>
-
-  <div id="alphabet-btns"><p>Letters go here</p></div>
-  </div>
+    <div class="scoreBoard">
+      <ul class="list-group">
+        <li class="list-group-item active">
+          <p> Press Any Key To Get Started!</p>
+        </li>
+        <li class="list-group-item">
+          <p id="winCounter">Wins</p>
+        </li>
+        <li class="list-group-item">
+          <p id="lossCounter">Losses</p>
+        </li>
+        <li class="list-group-item">
+          <p id="currentWord">Current Word</p>
+        </li>
+        <li class="list-group-item">
+          <p id="guessesRemaining">Number Of Guesses Remaining:</p>
+        </li>
+        <li class="list-group-item">
+          <p id="guessed">Letters Already Guessed:</p>
+        </li>
+        <li class="list-group-item">
+          <p id="word"></p>
+        </li>
+      </ul>
+      <div id="alphabet-btns">
+        <h3>Make a guess</h3>
+      </div>
+    </div>
   </div>
   <div class="col-md-2"></div>
   <!--Javascript file-->
   <script src="assets/javascript/game.js"></script>
   <script type="text/javascript" src="assets/javascript/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="assets/javascript/bootstrap.js"></script>
-
 </body>
 
 </html>
