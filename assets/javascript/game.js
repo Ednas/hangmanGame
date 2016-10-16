@@ -26,33 +26,41 @@ var incorrectGuess = [];
    // create alphabet ul
   var buttons = function () {
     //gets the alphabet button id from html
-    myButtons = document.getElementById('alphabet-btns');
+    var myButtons = document.getElementById('alphabet-btns');
     //creates unordered list for the letters
-    letters = document.createElement('ul');
+    var letters = document.createElement('ul');
 
 
     //loops through the alphabet
     for (var i = 0; i < alphabet.length; i++) {
       //creates li for list
-      list = document.createElement('li');
+      let listItem = document.createElement('li');
       //this creates the button and adds the bootstrap button look to it
-      list = document.createElement('BUTTON');
-      list.classList.add('btn-primary');
+      listItem = document.createElement('BUTTON');
+      listItem.classList.add('btn-primary');
       //gives each list item the id letter
-      list.id = 'letter';
-      list.innerHTML = alphabet[i];
+//      list.id = 'letter';
+      listItem.innerHTML = alphabet[i];
       //appends letters to my buttons and list to letters
-      myButtons.appendChild(letters);
-      letters.appendChild(list);
+      myButtons.appendChild(listItem);
+      listItem.dataset.alphabet = alphabet[i];
+      listItem.onclick = function(){
+        console.log('hello '+listItem.dataset.alphabet)
+      }
+//      letters.appendChild(list);
+      // alphadata = alphabet[i];
+      // listItem.attribute(data.alphadata);
  
     }
   }
   buttons();
 
 
-
-document.getElementById('letter').style.display="none";
-document.getElementById('letter').style.fontSize='60px';  
+//  var article = document.getElementById('electriccars');
+ 
+// article.dataset.columns // "3"
+// article.dataset.indexNumber // "12314"
+// article.dataset.parent // "cars"
 
 
 
@@ -143,8 +151,6 @@ function round() {
   }
 
 }
-
-
 
 
 
