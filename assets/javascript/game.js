@@ -48,12 +48,20 @@ var incorrectGuess = [];
     }
   }
   buttons();
-//document.getElementById('letter').style.fontSize='60px';  
+
+
+
+document.getElementById('letter').style.display="none";
+document.getElementById('letter').style.fontSize='60px';  
+
+
 
 //Below is the functionality of the game
 function startGame() {
   numGuesses = 12;
   blanksAndSuccess =[];
+    guessedLetter = [];
+    incorrectGuess = [];  
   //Selects a fruitword at random
   currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
 
@@ -115,7 +123,7 @@ function round() {
   if (currentLetters.toString() == blanksAndSuccess.toString()) {
     winCounter++; // add to the win counter 
     document.getElementById("word").innerHTML = "The word was " +currentWord;
-    alert("You win! The word was " + currentWord); // give the user an alert
+    alert("You win! The word was " + currentWord); // give the user an alert   
 
     // Update the win counter in the HTML
     document.getElementById("winCounter").innerHTML = "You have won " + winCounter + " game(s)";
@@ -127,8 +135,6 @@ function round() {
     lossCounter++; // add to the loss counter 
         document.getElementById("word").innerHTML = "The word was " +currentWord;
 
-    guessedLetter = [];
-    incorrectGuess = [];
     alert("You lose. The word was " + currentWord); // give the user an alert
 
     // Update the loss counter in the HTML
