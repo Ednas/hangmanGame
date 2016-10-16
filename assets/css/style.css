@@ -7,7 +7,6 @@ body {
   text-align: center;
   color: #38529E;
   font-family: 'Bungee Inline', cursive;
-
 }
 
 .jumbotron h1 {
@@ -16,28 +15,33 @@ body {
 
 .scoreBoard {
   align-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 #currentWord {
   text-align: center;
   font-size: 30px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #alphabet-btns {
   text-align: center;
   padding-right: 50px;
   padding-left: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .center {
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .btn-primary {
   margin: 0 10px 10px 0;
   width: 35px;
   height: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;  
 }
 .btn-primary:hover {
     background: #000;
