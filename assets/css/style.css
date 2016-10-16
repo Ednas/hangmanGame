@@ -1,10 +1,17 @@
 body {
   background-color: #FFF88B;
+  font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron {
   text-align: center;
   color: #38529E;
+  font-family: 'Bungee Inline', cursive;
+
+}
+
+.jumbotron h1 {
+  font-size: 100px;  
 }
 
 .scoreBoard {
@@ -31,9 +38,21 @@ body {
   margin: 0 10px 10px 0;
   width: 35px;
   height: 30px;
-  &:hover {
-    background: $base-color;
-    border: solid 1px $grey;
-    color: $grey;
-  }
 }
+.btn-primary:hover {
+    background: #000;
+    border: solid 1px $grey;
+    color: #FFF88B;
+  }
+.btn-primary:disabled {
+    background: #68349E;
+    border: solid 1px;
+    color: #fff;
+  }  
+footer {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+
+

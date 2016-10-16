@@ -25,6 +25,7 @@ var correctLetter = [];
 //guessed letters that are incorrect
 var incorrectGuess = [];
 
+
 // create alphabet ul
 var buttons = function() {
   //gets the alphabet button id from html
@@ -50,10 +51,14 @@ var buttons = function() {
 
     listItem.onclick = function() {
       var userGuess = listItem.dataset.alphabet;
+  //listItem[i].disabled      
+  //    document.getElementById("Button").disabled = true;  
       console.log('hello ' + userGuess);
       guessedLetter.push(userGuess);
       document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
-      checkLetters(userGuess); // runs the code to check for correctness 
+      checkLetters(userGuess); // runs the code to check for correctness    
+
+  
       round();
       //  console.log(userGuess);
     }
