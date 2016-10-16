@@ -23,9 +23,7 @@
         <h1>Fruity <br> Hangman Game</h1>
       </div>
     </div>
-          <div id="alphabet-btns">
-        <h3>Make a guess</h3>
-      </div>
+
     <div class="scoreBoard">
       <ul class="list-group">
         <li class="list-group-item active">
@@ -34,6 +32,8 @@
         <li class="list-group-item">
           <p id="currentWord">Find the missing letters: </p>
         </li>
+        </ul>
+        <ul class="list-group col-md-6">
         <li class="list-group-item">
           <p id="guessesRemaining">Number Of Guesses Remaining:</p>
         </li>
@@ -41,28 +41,34 @@
           <p id="guessed">Letters Already Guessed:</p>
         </li>
         <li class="list-group-item">
-          <p id="word"></p>
-        </li>
-        <li class="list-group-item">
           <p id="winCounter">Wins</p>
 
           <p id="lossCounter">Losses</p>
         </li>
+        <li class="list-group-item">
+          <p id="word"></p>
+        </li>        
       </ul>
-
+          <div id="alphabet-btns" class="col-md-6">
+        <h3>Make a guess</h3>
+      </div>
     </div>
 
 
+    
+  </div>
+
+  <div class="col-md-2"></div>  
+
+
+  <div class="col-md-12">       
     <footer class="footer">
 
         <p><a href="http://www.edna.tech">About Edna Jonsson</a> | <a href="https://github.com/Ednas/hangmanGame">GitHub Repo</a>
           <br> &copy; 2016 Edna Jonsson</p>
  
-    </footer>     
-  </div>
-
-  <div class="col-md-2"></div>          
-      </div>
+    </footer> 
+  </div> 
 
 
   <!--Javascript file-->

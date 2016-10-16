@@ -2,7 +2,7 @@
 //Array of fruitwords
 var fruitWords = ['banana', 'fig', 'watermelon', 'grape', 'coconut', 'cherry', 'lime', 'pineapple',
   'tomato', 'apple', 'orange', 'kiwi', 'strawberry', 'dragonfruit', 'blueberry', 'blackberry',
-  'mango', 'plum', 'pear', 'papaya', 'avoccodo', 'pasionfruit', 'current', 'boysenberry', 'quints', 'salmonberry',
+  'mango', 'plum', 'pear', 'papaya', 'avocado', 'passionfruit', 'current', 'boysenberry', 'quince', 'salmonberry',
   'yuzu', 'grapefruit', 'kumquat'
 ];
 var blanksAndSuccess = []; //Correct guesses and blanks will be in this array

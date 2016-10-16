@@ -3,10 +3,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+  margin-top: 0;
+}
+
 .jumbotron {
   text-align: center;
   color: #38529E;
   font-family: 'Bungee Inline', cursive;
+  background-color: #B9A2D2;
 }
 
 .jumbotron h1 {
@@ -38,8 +43,8 @@ body {
 
 .btn-primary {
   margin: 0 10px 10px 0;
-  width: 35px;
-  height: 30px;
+  width: 40px;
+  height: 35px;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;  
 }
