@@ -1,11 +1,17 @@
-.jumbotron {
-  text-align: center;
-}
-.scoreBoard {
-	align-content: center;
+body {
+  background-color: #FFF88B;
 }
 
-#currentWord{
+.jumbotron {
+  text-align: center;
+  color: #38529E;
+}
+
+.scoreBoard {
+  align-content: center;
+}
+
+#currentWord {
   text-align: center;
   font-size: 30px;
 }
@@ -16,14 +22,18 @@
   padding-left: 50px;
 }
 
+.center {
+  text-align: center;
+  font-size: 20px;
+}
 
 .btn-primary {
   margin: 0 10px 10px 0;
   width: 35px;
   height: 30px;
-    &:hover{
-      background:$base-color;
-      border: solid 1px $grey;
-      color:$grey;
-    }  
+  &:hover {
+    background: $base-color;
+    border: solid 1px $grey;
+    color: $grey;
+  }
 }
