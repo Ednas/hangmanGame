@@ -53,7 +53,6 @@ var buttons = function() {
       var userGuess = listItem.dataset.alphabet;
   //listItem[i].disabled      
   //    document.getElementById("Button").disabled = true;  
-      console.log('hello ' + userGuess);
       guessedLetter.push(userGuess);
       document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
       checkLetters(userGuess); // runs the code to check for correctness    
@@ -65,7 +64,8 @@ var buttons = function() {
 
   }
 }
-buttons();
+
+document.getElementById("gameStart").onclick = function() {buttons()};
 
 
 //Below is the functionality of the game
@@ -86,7 +86,6 @@ function startGame() {
     blanksAndSuccess.push("_")
   }
   console.log(currentWord);
-  console.log(blanksAndSuccess);
   document.getElementById('currentWord').innerHTML = "Find the missing letters: " + blanksAndSuccess.join(" ");
   document.getElementById('guessesRemaining').innerHTML = "Guesses left: " + numGuesses;
   document.getElementById('guessed').innerHTML = "Letters already guessed: "
@@ -134,7 +133,7 @@ function round() {
   // If we have gotten all the letters to match the solution... 
   if (currentLetters.toString() == blanksAndSuccess.toString()) {
     winCounter++; // add to the win counter 
-    document.getElementById("word").innerHTML = "The word was " + currentWord;
+    document.getElementById("word").innerHTML = "The last word was " + currentWord;
     alert("You win! The word was " + currentWord); // give the user an alert   
 
     // Update the win counter in the HTML
@@ -145,7 +144,7 @@ function round() {
   // If we've run out of guesses
   else if (numGuesses == 0) {
     lossCounter++; // add to the loss counter 
-    document.getElementById("word").innerHTML = "The word was " + currentWord;
+    document.getElementById("word").innerHTML = "The last word was " + currentWord;
 
     alert("You lose. The word was " + currentWord); // give the user an alert
 
@@ -155,6 +154,11 @@ function round() {
   }
 
 }
+
+
+
+
+
 
 //Making the stuff run
 //Calling the startGame function

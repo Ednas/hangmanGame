@@ -63,5 +63,13 @@ footer {
   font-family: 'Indie Flower', cursive;
 }
 
-
+@media only screen and (max-width: 800px){
+  .jumbotron h1 {
+  font-size: 80px;  
+}
+}
+@media screen and (max-width: 600px){
+.jumbotron h1 {
+  font-size: 50px;  
+}
 
