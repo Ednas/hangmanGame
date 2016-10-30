@@ -7,6 +7,11 @@ h3 {
   margin-top: 0;
 }
 
+/*For buttons to work on iOS*/
+.btn {
+  cursor: pointer;
+}
+
 .jumbotron {
   text-align: center;
   color: #38529E;
