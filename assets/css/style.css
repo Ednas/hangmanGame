@@ -11,6 +11,9 @@ h3 {
 .btn {
   cursor: pointer;
 }
+.btn:hover, .btn:active{ 
+  color: blue;
+}
 
 .jumbotron {
   text-align: center;
