@@ -50,16 +50,11 @@ var buttons = function() {
 
 
     listItem.onclick = function() {
-      var userGuess = listItem.dataset.alphabet;
-  //listItem[i].disabled      
-  //    document.getElementById("Button").disabled = true;  
+      var userGuess = listItem.dataset.alphabet;     
       guessedLetter.push(userGuess);
       document.getElementById('guessed').innerHTML = "Letters Already Guessed: " + guessedLetter.join(" ");
-      checkLetters(userGuess); // runs the code to check for correctness    
-
-  
+      checkLetters(userGuess); // runs the code to check for correctness      
       round();
-      //  console.log(userGuess);
     }
 
   }
@@ -115,10 +110,7 @@ function checkLetters(letter) {
     numGuesses--;
     console.log("that was incorrect " + numGuesses + " are remaining");
   }
-
 }
-
-
 
 //Upon finishing
 function round() {
@@ -152,13 +144,7 @@ function round() {
     document.getElementById("lossCounter").innerHTML = "You have lost " + lossCounter + " game(s)";
     startGame(); // restart the game
   }
-
 }
-
-
-
-
-
 
 //Making the stuff run
 //Calling the startGame function
