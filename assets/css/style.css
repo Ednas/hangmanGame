@@ -1,83 +1,88 @@
-body {
-  background-color: #FFFBC0;
-  font-family: 'Roboto', sans-serif;
-}
-
-h3 {
-  margin-top: 0;
-}
-
-/*For buttons to work on iOS*/
-.btn {
-  cursor: pointer;
-}
-.btn:hover, .btn:active{ 
-  color: blue;
-}
-
-.jumbotron {
-  text-align: center;
-  color: #38529E;
-  font-family: 'Bungee Inline', cursive;
-  background-color: #B9A2D2;
-}
-
-.jumbotron h1 {
-  font-size: 100px;  
-}
-
-.scoreBoard {
-  align-content: center;
-  font-family: 'Roboto', sans-serif;
-}
-
-#currentWord {
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Roboto', sans-serif;
-}
-
-#alphabet-btns {
-  text-align: center;
-  padding-right: 50px;
-  padding-left: 50px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.center {
-  text-align: center;
-  font-size: 30px;
-}
-
-.btn-primary {
-  margin: 0 10px 10px 0;
-  width: 40px;
-  height: 35px;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;  
-}
-.btn-primary:hover {
-    background: #000;
-    border: solid 1px $grey;
-    color: #FFF88B;
-  }
-.btn-primary:disabled {
-    background: #68349E;
-    border: solid 1px;
-    color: #fff;
-  }  
-footer {
-  text-align: center;
-  font-family: 'Indie Flower', cursive;
-}
-
-@media only screen and (max-width: 800px){
-  .jumbotron h1 {
-  font-size: 80px;  
-}
-}
-@media screen and (max-width: 600px){
-.jumbotron h1 {
-  font-size: 50px;  
-}
-
+        body {
+        background-color: #FFFBC0;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    h3 {
+        margin-top: 0;
+    }
+    /*For buttons to work on iOS*/
+    
+    .btn {
+        cursor: pointer;
+    }
+    
+    .btn:hover,
+    .btn:active {
+        color: blue;
+    }
+    
+    .jumbotron {
+        text-align: center;
+        color: #38529E;
+        font-family: 'Bungee Inline', cursive;
+        background-color: #B9A2D2;
+    }
+    
+    .jumbotron h1 {
+        font-size: 100px;
+    }
+    
+    .scoreBoard {
+        align-content: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    #currentWord {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    #alphabet-btns {
+        text-align: center;
+        padding-right: 50px;
+        padding-left: 50px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .center {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .btn-primary {
+        margin: 0 10px 10px 0;
+        width: 40px;
+        height: 35px;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+    }
+    
+    .btn-primary:hover {
+        background: #000;
+        border: solid 1px $grey;
+        color: #FFF88B;
+    }
+    
+    .btn-primary:disabled {
+        background: #68349E;
+        border: solid 1px;
+        color: #fff;
+    }
+    
+    footer {
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        .jumbotron h1 {
+            font-size: 80px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .jumbotron h1 {
+            font-size: 50px;
+        }
